@@ -1,4 +1,4 @@
-<footer class="bg-gray-100">
+<footer class="bg-white">
     <div class="max-w-5xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
       <div class="flex justify-center text-3xl font-black text-teal-600">
         RenewOnline

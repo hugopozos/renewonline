@@ -9,13 +9,7 @@ middleware(['redirect-to-dashboard']);
 
 <x-layouts.marketing>
 
-<!--
-  Heads up! 👋
-
-  This component comes with some `rtl` classes. Please remove them if they are not needed in your project.
--->
-
-    <section class="overflow-hidden bg-gray-50 sm:grid sm:grid-cols-2 sm:items-center">
+    <section class="pt-16 overflow-hidden bg-gray-100 sm:grid sm:grid-cols-2 sm:items-center">
         <div class="p-8 md:p-12 lg:px-16 lg:py-24">
             <div class="max-w-xl mx-auto text-center ltr:sm:text-left rtl:sm:text-right">
                 <h2 class="text-4xl font-extrabold leading-none tracking-tight text-gray-900 lg:text-6xl">
@@ -43,7 +37,7 @@ middleware(['redirect-to-dashboard']);
         />
     </section>
 
-    <section class="py-24 bg-white font-poppins">
+    <section class="py-24 bg-gray-100 font-poppins">
         <div class="max-w-screen-xl px-4 py-8 mx-auto mt-4 xs:py-5 lg:px-6">
             <div class="max-w-screen-md mb-8 lg:mb-16">
                 <h1 class="mb-6 text-4xl font-extrabold leading-none tracking-tight text-gray-900 lg:text-5xl">¿Por qué somos la <span class="underline underline-offset-3 decoration-8 decoration-green-500">mejor opción</span>?</h1>

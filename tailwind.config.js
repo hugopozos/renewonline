@@ -17,9 +17,13 @@ module.exports = {
     content: [
         './app/**/*.php',
         "./resources/**/*.{php,html,js,jsx,ts,tsx,vue,twig}",
+        "./node_modules/flowbite/**/*.js"
+
     ],
     plugins: [
         require('@tailwindcss/forms'),
         require('@tailwindcss/typography'),
+        require('flowbite/plugin')
+
     ],
 }

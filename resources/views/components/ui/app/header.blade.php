@@ -3,15 +3,22 @@
     <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
             <!-- Logo -->
-            <a href="{{ route('dashboard') }}" class="flex items-center shrink-0">
-                <x-ui.logo class="block w-auto text-gray-800 fill-current h-7 dark:text-gray-200" />
+            <a href="{{ route('dashboard') }}" class="flex items-center text-lg font-extrabold text-green-600 shrink-0">
+                RenewOnline
             </a>
 
             <!-- Navigation -->
             <div :class="{ 'absolute left-0' : open, 'relative' : !open }" class="flex flex-col justify-start w-full sm:relative sm:flex-row sm:justify-between" x-cloak>
                 @php
-                    $navLinks = ['Dashboard' => '/dashboard', 'Learn More' => '/learn'];
+                    $navLinks = ['Dashboard' => '/dashboard', 'Servicios' => '/services'];
+
+                    if (Auth::user()->employee) {
+                        $navLinks['Trabajador'] = '/employee/work';
+                    } else{
+                        $navLinks['Solicitar empleo'] = '/employee';
+                    }
                 @endphp
+                
                 <!-- Navigation Links -->
                 <nav :class="{'flex flex-col bg-white dark:bg-gray-900 relative z-50 w-full h-auto px-4 py-5 left-0 mt-16': open, 'hidden': ! open}" class="items-center space-y-3 sm:space-x-3 sm:space-y-0 sm:mt-0 sm:bg-transparent sm:p-0 sm:relative sm:flex sm:-my-px sm:ml-8" x-cloak>
                     @foreach($navLinks as $title => $route)
@@ -20,9 +27,6 @@
                 </nav>
 
                 <div class="flex items-center">
-                    <div class="hidden w-[38px] h-[38px] overflow-hidden rounded-full sm:block" x-cloak>
-                        <x-ui.light-dark-switch></x-ui.light-dark-switch>
-                    </div>
 
                     <!-- User Dropdown -->
                     <div x-data="{ dropdownOpen: false }"

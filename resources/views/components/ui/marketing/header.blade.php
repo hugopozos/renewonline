@@ -1,4 +1,4 @@
-<header class="w-full">
+<header class="w-full bg-white shadow-2xl">
     <div class="relative z-20 flex items-center justify-between w-full h-20 max-w-6xl px-6 mx-auto">
         <div x-data="{ mobileMenuOpen: false }" class="relative flex items-center md:space-x-2 text-neutral-800">
             
@@ -18,8 +18,6 @@
                 
                 <nav class="flex flex-col w-full p-6 space-y-2 bg-white md:p-0 md:flex-row md:space-x-2 md:space-y-0 md:w-auto md:bg-transparent md:flex">
                     <x-ui.nav-link href="/">Inicio</x-ui.nav-link>
-                    <x-ui.nav-link href="#">Servicios</x-ui.nav-link>
-                    <x-ui.nav-link href="#">Empleos</x-ui.nav-link>
                     @if(view()->exists('pages.blog.index'))
                         <x-ui.nav-link href="/blog">Blog</x-ui.nav-link>
                     @endif
